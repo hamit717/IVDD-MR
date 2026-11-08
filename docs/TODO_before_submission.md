@@ -1,6 +1,6 @@
 # 投稿前待办清单
 
-状态：Discussion 已完稿（v1.0），Methods/Results 已回填，稿件已合并为 `Manuscript_v0.2.md`（约 4,600 词）。
+状态：Discussion 已完稿并配齐 14 条文献，Methods/Results 已回填，声明与图注已起草，稿件已合并为 `Manuscript_v0.2.md`（约 6,400 词，含声明/文献/图注）。
 以下按"必须做 / 应该做 / 可选"三档排列，全部清完后即可投稿。
 
 ---
@@ -16,20 +16,29 @@
 - [ ] 打 release 拿 DOI：GitHub → Releases → New（tag `v1.0.0`），再用 Zenodo 授权，然后
       `python3 scripts/set_repo_url.py <用户名> --doi 10.5281/zenodo.xxxxxxx`
 
-### A2. 参考文献（13 处正文 `[ref]`）
-| 位置 | 需要什么样的文献 |
-|---|---|
-| 4.2 段1 | BMP6 → SMAD1/5/8、软骨细胞肥大与基质矿化（椎间盘或软骨，1–2 篇） |
-| 4.2 段1 | BMP 信号随椎间盘退变升高、与钙化/肥大表型相关（1 篇） |
-| 4.2 段2 | CHRDL1 作为 BMP4/BMP6 拮抗剂的生化机制（1 篇） |
-| 4.3 DAG1 | dystroglycan 糖基化与基底膜/ECM 组装、dystroglycanopathy（1 篇综述） |
-| 4.3 SCN4B | Navβ 亚基的黏附/细胞骨架锚定功能（1 篇） |
-| 4.5 | 颈椎病与系统代谢合并症的临床流行病学（1 篇） |
-| 4.5 | 血脂/甲状腺/糖尿病与椎间盘退变的关联（1 篇） |
-| 4.7 | 三篇对照研究（ESJ 2025 / JOSR 2026 / 中国组织工程研究 2025）——需核实卷期页码 |
-| 4.8 | BMP 通路药物的临床进展（BMP-2 脊柱融合 + BMP 通路抑制剂，1–2 篇） |
+### A2. 参考文献 —— 已完成（2026-11-08）
+- [x] 12 处引用点全部配真实文献，共 **14 条**，编号按出现顺序（Vancouver）
+- [x] 每条均按 PMID 从 PubMed / Europe PMC 取书目与 DOI，存放在 `docs/references.json`
+- [x] 正文写 `[ref:键名]`，`assemble_manuscript.py` 自动编号并追加 References 节；改句子不会乱号
+- [ ] **你终审两件事**：① 14 条文献是否都该引（尤其 4.7 与三篇对照研究）；② 4 处为配文献而改写的原句（清单见 `Discussion_v1.0.md` 审核要点第 7 条）
+- [ ] 若你手上有 CHRDL1–BMP6 直接结合的证据，或"中文研究"的真实出处，给我，我改回并补引
 
-> 知网/PubMed 检索式在开工包里；三条对照研究建议直接读原文核对方位，不要只按我此前的二手描述引用。
+| # | 文献 | 用在哪 |
+|---|---|---|
+| 1 | Chen 2022 *Cells* — 牵张力经 BMP-2/6→SMAD1/5/8 诱导人纤维环细胞成骨 | 4.2 BMP6 机制 |
+| 2 | Wu 2024 *Cell Res* — TGF-β/BMP 在骨与软骨中的调控（软骨细胞肥大、基质矿化） | 4.2 BMP6 机制 |
+| 3 | Zieba 2022 *Bone Res* — TGFβ/BMP 信号调控可挽救椎间盘退变（filamin B 模型） | 4.2 BMP 随退变升高 |
+| 4 | Kan 2026 *J Orthop Surg Res* — 多组学 MR 优先定位 BMP6（含 DLK1，PP.H4 0.99） | 4.2、4.7 独立重复 |
+| 5 | Sakuta 2001 *Science* — ventroptin/CHRDL1 为 BMP-4 拮抗剂 | 4.2 CHRDL1 |
+| 6 | Brazil 2015 *Trends Cell Biol* — BMP 拮抗剂家族机制综述 | 4.2、4.8 |
+| 7 | Walimbe 2026 *Lancet Neurol* — dystroglycanopathy 机制与治疗 | 4.3 DAG1 |
+| 8 | Shimizu 2017 *JBC* — Navβ4 胞外域同源二聚体介导细胞黏附 | 4.3 SCN4B |
+| 9 | Malhotra 2000 *JBC* — β 亚基招募 ankyrin 至细胞接触点 | 4.3 SCN4B |
+| 10 | Badhiwala 2020 *Nat Rev Neurol* — 退变性颈髓病综述 | 4.5 颈椎流行病学 |
+| 11 | Zhang 2026 *BMC Musculoskelet Disord* — 多域危险因素与 IVDD 的 MR 荟萃 | 4.5 代谢 |
+| 12 | Ren 2025 *Eur Spine J* — 4,907 蛋白血浆蛋白组 MR（无部位细分、无共定位） | 4.7 对照 |
+| 13 | Zheng 2024 *JOR Spine* — 91 种炎症蛋白与脊柱退变（含颈椎，无共定位） | 4.7 对照 |
+| 14 | May 2019 *Curr Stem Cell Res Ther* — BMP 家族细胞因子在脊柱融合中的应用 | 4.8 转化 |
 
 ### A3. 投稿要件（已起草，待你确认/填空）
 - [x] Author contributions（CRediT，4 人）→ `docs/Declarations_v1.0.md`
@@ -90,6 +99,7 @@
 | Discussion 编辑入口 + 审核要点 | `docs/Discussion_v1.0.md` |
 | 声明（伦理/数据/代码/基金/COI/CRediT/AI） | `docs/Declarations_v1.0.md` |
 | 图注（Fig 1–4 + 补充表清单） | `docs/Figure_legends_v1.0.md` |
+| 参考文献库（14 条，含 PMID/DOI） | `docs/references.json` |
 | 数据来源与校验和 | `docs/DATA_SOURCES.md` |
 | 表 S1（数据可得性） | `results/tables/TableS1_data_sources.tsv` |
 | 表 S2（靶点注释） | `results/tables/TableS2_target_annotation.tsv` |

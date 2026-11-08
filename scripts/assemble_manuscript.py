@@ -15,6 +15,7 @@ Usage:  python3 scripts/assemble_manuscript.py
 """
 import re
 import pathlib
+import sys
 
 root = pathlib.Path(__file__).resolve().parent.parent
 read = lambda p: (root / p).read_text()
@@ -53,31 +54,49 @@ results = results.split("## 工作区产物索引")[0].rstrip().rstrip("-").rstr
 disc = "## Discussion" + dis.split("## 4. Discussion")[1]
 disc = disc.split("## 审核要点")[0].rstrip().rstrip("-").rstrip()
 
-# Figure legends file already carries its own H1-free body; give it a clean H1.
-legends = "## Figure legends\n\n" + legends
-decl = "## Declarations\n\n" + decl
+# Demote the source headings (##) so they nest under the section H2.
+demote = lambda s: re.sub(r"(?m)^##\s+", "### ", s)
+legends = "## Figure legends\n\n" + demote(legends)
+decl = "## Declarations\n\n" + demote(decl)
 
-header = """# Manuscript v0.2 (assembled) — Title page / Abstract / Methods / Results / Discussion / Declarations / Legends
+header = """# Manuscript v0.2 (assembled) — Title page / Abstract / Methods / Results / Discussion / Declarations / References / Legends
 
 > 自动生成文件，请勿直接编辑。改动请改 `docs/` 下的 5 个编辑入口，然后运行
 > `python3 scripts/assemble_manuscript.py` 重新组装（入口清单见脚本头部注释）。
-> 剩余待办见 `docs/TODO_before_submission.md`；`[ref]` 与 `[TODO]` 需在投稿前清零。
+> 剩余待办见 `docs/TODO_before_submission.md`；`[TODO]` 需在投稿前清零。
+> 参考文献：正文写方括号 ref:键名 占位，条目在 `docs/references.json`，组装时自动编号（Vancouver）。
 
 """
 
-out = "\n\n---\n\n".join([
+body = "\n\n---\n\n".join([
     header + front,
     abstract.strip(),
     methods.strip(),
     results.strip(),
     disc.strip(),
     decl,
-    legends,
-]) + "\n"
+])
+
+# Number citations in order of first appearance and build the reference list.
+sys.path.insert(0, str(root / "scripts"))
+from build_references import renumber, reference_list  # noqa: E402
+
+body, order, missing = renumber(body)
+if missing:
+    raise SystemExit(f"unknown reference keys: {sorted(missing)}")
+unused = sorted(set(__import__("json").loads(
+    (root / "docs/references.json").read_text())) - set(order))
+if unused:
+    print(f"  ! references defined but never cited: {unused}")
+
+refs = "## References\n\n" + reference_list(order)
+
+out = body + "\n\n---\n\n" + refs + "\n\n---\n\n" + legends + "\n"
 
 dest = root / "docs/Manuscript_v0.2.md"
 dest.write_text(out)
 
 words = len(re.findall(r"[A-Za-z][A-Za-z'\-]+", out))
 print(f"wrote {dest.relative_to(root)}")
-print(f"  ~{words} English words | [TODO] {out.count('[TODO')} | [ref] {out.count('[ref]')} | [confirm] {out.count('[confirm')}")
+print(f"  ~{words} English words | refs {len(order)} | [TODO] {out.count('[TODO')} "
+      f"| [ref: {out.count('[ref:')} | [confirm] {out.count('[confirm')}")

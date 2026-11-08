@@ -1,0 +1,156 @@
+{
+ "bmp_smad_disc": {
+  "pmid": "36010676",
+  "authors": "Chen CN, Chang HI, Yen CK, Liu WL, Huang KY",
+  "title": "Mechanical Stretch Induced Osteogenesis on Human Annulus Fibrosus Cells through Upregulation of BMP-2/6 Heterodimer and Activation of P38 and SMAD1/5/8 Signaling Pathways",
+  "journal": "Cells",
+  "year": "2022",
+  "volume": "11",
+  "issue": "16",
+  "pages": "2600",
+  "doi": "10.3390/cells11162600"
+ },
+ "bmp_smad_cartilage": {
+  "pmid": "38267638",
+  "authors": "Wu M, Wu S, Chen W, Li YP",
+  "title": "The roles and regulatory mechanisms of TGF-β and BMP signaling in bone and cartilage development, homeostasis and disease",
+  "journal": "Cell Res",
+  "year": "2024",
+  "volume": "34",
+  "issue": "2",
+  "pages": "101-123",
+  "doi": "10.1038/s41422-023-00918-9"
+ },
+ "bmp_disc_degen": {
+  "pmid": "35474298",
+  "authors": "Zieba J, Forlenza KN, Heard K, Martin JH, Bosakova M, Cohn DH, et al",
+  "title": "Intervertebral disc degeneration is rescued by TGFβ/BMP signaling modulation in an ex vivo filamin B mouse model",
+  "journal": "Bone Res",
+  "year": "2022",
+  "volume": "10",
+  "issue": "1",
+  "pages": "37",
+  "doi": "10.1038/s41413-022-00200-5"
+ },
+ "kan_multiomic": {
+  "pmid": "41832569",
+  "authors": "Kan S, Liu W, Li P, Zhou M, Yu H, Zheng Y, et al",
+  "title": "Multi-omics Mendelian randomization prioritizes BMP6 as a candidate therapeutic target in intervertebral disc degeneration",
+  "journal": "J Orthop Surg Res",
+  "year": "2026",
+  "volume": "21",
+  "issue": "1",
+  "pages": "272",
+  "doi": "10.1186/s13018-026-06762-y"
+ },
+ "chrdl1": {
+  "pmid": "11441185",
+  "authors": "Sakuta H, Suzuki R, Takahashi H, Kato A, Shintani T, Iemura Si, et al",
+  "title": "Ventroptin: a BMP-4 antagonist expressed in a double-gradient pattern in the retina",
+  "journal": "Science",
+  "year": "2001",
+  "volume": "293",
+  "issue": "5527",
+  "pages": "111-115",
+  "doi": "10.1126/science.1058379"
+ },
+ "bmp_antagonist_review": {
+  "pmid": "25592806",
+  "authors": "Brazil DP, Church RH, Surae S, Godson C, Martin F",
+  "title": "BMP signalling: agony and antagony in the family",
+  "journal": "Trends Cell Biol",
+  "year": "2015",
+  "volume": "25",
+  "issue": "5",
+  "pages": "249-264",
+  "doi": "10.1016/j.tcb.2014.12.004"
+ },
+ "dag1": {
+  "pmid": "42309089",
+  "authors": "Walimbe AS, Muntoni F, Campbell KP",
+  "title": "Clinical presentations and pathophysiological mechanisms of dystroglycanopathy: advancing therapeutic strategies",
+  "journal": "Lancet Neurol",
+  "year": "2026",
+  "volume": "25",
+  "issue": "7",
+  "pages": "689-700",
+  "doi": "10.1016/s1474-4422(26)00191-2"
+ },
+ "scn4b_adhesion": {
+  "pmid": "28655765",
+  "authors": "Shimizu H, Tosaki A, Ohsawa N, Ishizuka-Katsura Y, Shoji S, Miyazaki H, et al",
+  "title": "Parallel homodimer structures of the extracellular domains of the voltage-gated sodium channel β4 subunit explain its role in cell-cell adhesion",
+  "journal": "J Biol Chem",
+  "year": "2017",
+  "volume": "292",
+  "issue": "32",
+  "pages": "13428-13440",
+  "doi": "10.1074/jbc.m117.786509"
+ },
+ "scn4b_ankyrin": {
+  "pmid": "10753953",
+  "authors": "Malhotra JD, Kazen-Gillespie K, Hortsch M, Isom LL",
+  "title": "Sodium channel beta subunits mediate homophilic cell adhesion and recruit ankyrin to points of cell-cell contact",
+  "journal": "J Biol Chem",
+  "year": "2000",
+  "volume": "275",
+  "issue": "15",
+  "pages": "11383-11388",
+  "doi": "10.1074/jbc.275.15.11383"
+ },
+ "cervical_epi": {
+  "pmid": "31974455",
+  "authors": "Badhiwala JH, Ahuja CS, Akbar MA, Witiw CD, Nassiri F, Furlan JC, et al",
+  "title": "Degenerative cervical myelopathy - update and future directions",
+  "journal": "Nat Rev Neurol",
+  "year": "2020",
+  "volume": "16",
+  "issue": "2",
+  "pages": "108-124",
+  "doi": "10.1038/s41582-019-0303-0"
+ },
+ "metabolic_disc": {
+  "pmid": "42243749",
+  "authors": "Zhang H, Tian J, Lu Y, Yu D, Wu H, Lu Y, et al",
+  "title": "Causal links between multi-domain risk factors and intervertebral disc degeneration: a systematic review and meta-analysis of Mendelian randomization studies",
+  "journal": "BMC Musculoskelet Disord",
+  "year": "2026",
+  "volume": "27",
+  "issue": "1",
+  "pages": "668",
+  "doi": "10.1186/s12891-026-10040-7"
+ },
+ "pwmr_4907": {
+  "pmid": "39500755",
+  "authors": "Ren BW, Liu YH, Wu JH, An BC, Liu QZ, Liu CY, et al",
+  "title": "Causal effects of plasma proteome on intervertebral disc degeneration: a comprehensive mendelian randomization study",
+  "journal": "Eur Spine J",
+  "year": "2025",
+  "volume": "34",
+  "issue": "1",
+  "pages": "316-325",
+  "doi": "10.1007/s00586-024-08551-9"
+ },
+ "cip_91": {
+  "pmid": "38895179",
+  "authors": "Zheng Q, Lin R, Wang D, Zheng C, Xu W",
+  "title": "Effects of circulating inflammatory proteins on spinal degenerative diseases: Evidence from genetic correlations and Mendelian randomization study",
+  "journal": "JOR Spine",
+  "year": "2024",
+  "volume": "7",
+  "issue": "2",
+  "pages": "e1346",
+  "doi": "10.1002/jsp2.1346"
+ },
+ "bmp2_clinical": {
+  "pmid": "31455201",
+  "authors": "May RD, Frauchiger DA, Albers CE, Tekari A, Benneker LM, Klenke FM, et al",
+  "title": "Application of Cytokines of the Bone Morphogenetic Protein (BMP) Family in Spinal Fusion - Effects on the Bone, Intervertebral Disc and Mesenchymal Stromal Cells",
+  "journal": "Curr Stem Cell Res Ther",
+  "year": "2019",
+  "volume": "14",
+  "issue": "8",
+  "pages": "618-643",
+  "doi": "10.2174/1574888x14666190628103528"
+ }
+}

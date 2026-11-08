@@ -1,8 +1,9 @@
-# Manuscript v0.2 (assembled) — Title page / Abstract / Methods / Results / Discussion / Declarations / Legends
+# Manuscript v0.2 (assembled) — Title page / Abstract / Methods / Results / Discussion / Declarations / References / Legends
 
 > 自动生成文件，请勿直接编辑。改动请改 `docs/` 下的 5 个编辑入口，然后运行
 > `python3 scripts/assemble_manuscript.py` 重新组装（入口清单见脚本头部注释）。
-> 剩余待办见 `docs/TODO_before_submission.md`；`[ref]` 与 `[TODO]` 需在投稿前清零。
+> 剩余待办见 `docs/TODO_before_submission.md`；`[TODO]` 需在投稿前清零。
+> 参考文献：正文写方括号 ref:键名 占位，条目在 `docs/references.json`，组装时自动编号（Vancouver）。
 
 ## Title
 
@@ -141,15 +142,17 @@ We screened 2,058 circulating proteins with cis-acting genetic instruments again
 
 First, **the cervical and lumbar protein signatures did not overlap at all**. Nine proteins reached significance for lumbar disc herniation; a single, different protein reached significance for cervical disc disorder; no protein was shared. Genetic and proteomic studies of disc degeneration have almost universally treated it as one disease, usually as a composite "intervertebral disc degeneration" phenotype assembled from mixed ICD codes. Our data suggest that its two commonest clinical presentations have distinguishable circulating proteomic architecture, and that pooling them averages away signal.
 
-Second, **the BMP axis behaved as a pathway rather than as a list of hits**. BMP6, a pro-osteogenic ligand of the TGF-β superfamily, increased risk (OR 1.34 per 1-SD higher genetically predicted plasma level), while CHRDL1, a secreted antagonist that binds BMP4/BMP6 and blocks receptor engagement, reduced it (OR 0.89). A ligand and its endogenous inhibitor moving in opposite directions on the same endpoint is a two-sided test that a single-protein design cannot perform, and it is the pattern expected if the effect is genuinely transduced through BMP signalling rather than through a single protein's incidental correlates.
+Second, **the BMP axis behaved as a pathway rather than as a list of hits**. BMP6, a pro-osteogenic ligand of the TGF-β superfamily, increased risk (OR 1.34 per 1-SD higher genetically predicted plasma level), while CHRDL1, a secreted chordin-family antagonist of BMP signalling, reduced it (OR 0.89). A ligand and its endogenous inhibitor moving in opposite directions on the same endpoint is a two-sided test that a single-protein design cannot perform, and it is the pattern expected if the effect is genuinely transduced through BMP signalling rather than through a single protein's incidental correlates.
 
 Third, **the strongest signal in the dataset failed colocalization and we removed it**. IGFBP3 had the smallest P value in the lumbar endpoint (8.7×10⁻¹²) and showed the kind of severity gradient that authors like to interpret as dose–response (OR 1.13 in all lumbar herniation, 1.30 in surgically treated disease). Colocalization refused it: PP.H4 was 0.025 in the lumbar endpoint, PP.H3 reached 0.975, and the two association peaks lay 73 kb apart. We report this as a negative result, for reasons set out in section 4.6.
 
 ### 4.2 The BMP axis: a ligand and its antagonist point the same way
 
-BMP6 signals through SMAD1/5/8 and is one of the principal drivers of chondrocyte hypertrophy and matrix mineralisation in the intervertebral disc and in articular cartilage [ref]. In the nucleus pulposus, BMP signalling rises with degeneration and accompanies the calcification and hypertrophic cell phenotypes seen in aged and degenerated tissue [ref]; in the endplate, the same pathway is coupled to the remodelling that underlies Modic changes. A risk-increasing direction for genetically predicted circulating BMP6 is therefore consistent with an established biology, and it independently reproduces the BMP6 candidate identified by a recent multi-omic MR study of disc degeneration [ref]. Independent reproduction by a different instrument set and a different analytic chain is not trivial in this field, where most reported protein–disease pairs have never been examined twice.
+BMP6 signals through SMAD1/5/8 and is one of the principal drivers of chondrocyte hypertrophy and matrix mineralisation in the intervertebral disc and in articular cartilage [1,2]. In the nucleus pulposus, BMP signalling rises with degeneration and accompanies the calcification and hypertrophic cell phenotypes seen in aged and degenerated tissue [3]; in the endplate, the same pathway is coupled to the remodelling that underlies Modic changes. A risk-increasing direction for genetically predicted circulating BMP6 is therefore consistent with an established biology, and it independently reproduces the BMP6 candidate identified by a recent multi-omic MR study of disc degeneration [4]. Independent reproduction by a different instrument set and a different analytic chain is not trivial in this field, where most reported protein–disease pairs have never been examined twice.
 
-The informative addition is CHRDL1. Chordin-like 1 is a secreted BMP antagonist with high affinity for BMP4 and BMP6; by occupying the ligand it prevents type I receptor engagement and reduces SMAD1/5/8 activation [ref]. Genetically higher CHRDL1 was protective against lumbar disc herniation (OR 0.89, 95% CI 0.85–0.93), and the effect was graded across phenotypes (0.90 cervical, 0.89 all lumbar, 0.84 surgically treated). Ligand up → risk up; antagonist up → risk down. The internal coherence of this pair is, in our judgement, the strongest single piece of evidence in the study, precisely because the two proteins were not selected to be a pair.
+The informative addition is CHRDL1. Chordin-like 1 is a secreted antagonist of the chordin family; by occupying BMP ligands it prevents type I receptor engagement and reduces SMAD1/5/8 activation [5,6]. Genetically higher CHRDL1 was protective against lumbar disc herniation (OR 0.89, 95% CI 0.85–0.93), and the effect was graded across phenotypes (0.90 cervical, 0.89 all lumbar, 0.84 surgically treated). Ligand up → risk up; antagonist up → risk down. The internal coherence of this pair is, in our judgement, the strongest single piece of evidence in the study, precisely because the two proteins were not selected to be a pair.
+
+One qualification here is biochemical rather than statistical. CHRDL1 has been shown directly to antagonise BMP4, and the chordin family blocks BMP-receptor engagement more generally, but a direct CHRDL1–BMP6 interaction has not, to our knowledge, been demonstrated experimentally. The pair is therefore coherent at the level of pathway antagonism rather than as a documented binary interaction, and we state it in those terms.
 
 Two caveats deserve statement. Plasma BMP6 is largely a hepatic and vascular protein, whereas the relevant BMP6 in disc degeneration is produced locally; a plasma pQTL therefore indexes systemic BMP tone, not intradiscal concentration. The same argument applies in reverse to the effect size: an OR of 1.34 per SD is unusually large for a plasma protein MR and is more plausible as a marker of pathway activity than as a quantitative estimate of the effect of raising circulating BMP6. What the data support is that the BMP axis is causally involved and that its direction is known — not that plasma BMP6 is the therapeutic entity.
 
@@ -159,11 +162,11 @@ External annotation is concordant. In Open Targets, the strongest genetic diseas
 
 Three of the five supported proteins occupy the same functional neighbourhood, namely the interface between the cell and its mechanical environment.
 
-**DAG1 (dystroglycan)** anchors the dystrophin–glycoprotein complex to laminin in the basal lamina and is required for assembly of a competent extracellular matrix; loss of dystroglycan glycosylation produces the dystroglycanopathies, in which matrix integrity fails in muscle and brain [ref]. Its association here was the largest in the study and protective: OR 0.55 (95% CI 0.43–0.71) for lumbar disc herniation, strengthening to 0.36 in surgically treated disease, with colocalization supported (PP.H4 = 0.852; 0.983 at p12 = 1×10⁻⁴). A matrix-anchoring protein with a large protective effect is a biologically legible result: the annulus fibrosus is a lamellar structure whose mechanical competence depends on the junction between cells and their surrounding collagen–proteoglycan matrix, and failure of that junction is a plausible route to the tears that precede herniation.
+**DAG1 (dystroglycan)** anchors the dystrophin–glycoprotein complex to laminin in the basal lamina and is required for assembly of a competent extracellular matrix; loss of dystroglycan glycosylation produces the dystroglycanopathies, in which matrix integrity fails in muscle and brain [7]. Its association here was the largest in the study and protective: OR 0.55 (95% CI 0.43–0.71) for lumbar disc herniation, strengthening to 0.36 in surgically treated disease, with colocalization supported (PP.H4 = 0.852; 0.983 at p12 = 1×10⁻⁴). A matrix-anchoring protein with a large protective effect is a biologically legible result: the annulus fibrosus is a lamellar structure whose mechanical competence depends on the junction between cells and their surrounding collagen–proteoglycan matrix, and failure of that junction is a plausible route to the tears that precede herniation.
 
 **DSG2 (desmoglein 2)** is a desmosomal cadherin mediating cell–cell adhesion. Desmosomes are load-bearing junctions, and in the annulus they connect cells within and between lamellae; intercellular junction failure under cyclical loading is an attractive mechanism for delamination. Genetically higher DSG2 was protective (OR 0.84, 0.78–0.91; PP.H4 = 0.837; 0.981 at p12 = 1×10⁻⁴) and again graded by severity (0.95 → 0.84 → 0.79).
 
-**SCN4B (Navβ4)** encodes an auxiliary subunit of voltage-gated sodium channels. Its canonical role is excitability, but β-subunits also participate in cell adhesion and cytoskeletal anchoring through ankyrin and spectrin interactions [ref], and Navβ4 has been implicated in resurgent sodium current in dorsal root ganglion neurons. The estimate was small (OR 1.07, 1.04–1.09) but the colocalization was the strongest in the study (PP.H4 = 0.997, 0.973 at the most conservative prior). We read SCN4B as the least mechanistically specific of the five: it is the only one whose supported biology plausibly runs through neuronal rather than structural mechanisms, and with an OR of 1.07 the possibility that the signal reflects a pathway shared with pain processing cannot be excluded.
+**SCN4B (Navβ4)** encodes an auxiliary subunit of voltage-gated sodium channels. Its canonical role is excitability, but β-subunits also participate in cell adhesion and cytoskeletal anchoring through ankyrin and spectrin interactions [8,9], and Navβ4 has been implicated in resurgent sodium current in dorsal root ganglion neurons. The estimate was small (OR 1.07, 1.04–1.09) but the colocalization was the strongest in the study (PP.H4 = 0.997, 0.973 at the most conservative prior). We read SCN4B as the least mechanistically specific of the five: it is the only one whose supported biology plausibly runs through neuronal rather than structural mechanisms, and with an OR of 1.07 the possibility that the signal reflects a pathway shared with pain processing cannot be excluded.
 
 The unifying reading — **disc degeneration as a failure of load-bearing cell–matrix and cell–cell connections** — has the practical virtue of matching the exposure that clinicians already accept. Mechanical loading is the one aetiological factor on which spine surgeons, physiotherapists and biomechanists agree, and it is the factor that no genetic study has yet been able to connect to a molecular mechanism. A cluster of three adhesion and cytoskeletal proteins, all protective when genetically raised, is a candidate molecular instantiation of that long-standing clinical intuition. We emphasise that this is a hypothesis generated by the data and not a mechanism demonstrated by them; the study contains no tissue, cellular or animal evidence.
 
@@ -179,9 +182,9 @@ Three qualifications limit how far this can be pushed. The endpoints are nested 
 
 CLPS (colipase), a pancreatic cofactor required for lipase activity in the intestinal lumen, was the only protein associated with cervical disc disorder (OR 0.91, 0.87–0.95) and colocalized strongly (PP.H4 = 0.978; 0.818–0.998 across priors). It was not associated with lumbar herniation (0.97, P = 0.062) nor with surgical disease (0.99, P = 0.74). We do not claim a direct local mechanism for a digestive enzyme in the cervical spine, and the finding is best stated as three linked observations.
 
-First, the genetic architecture of the CLPS signal points toward metabolism rather than structure: in Open Targets its dominant associations are hypothyroidism and myxoedema (0.39), with weaker signals for hypertriglyceridaemia and hyperlipoproteinaemia. Second, cervical disc disease differs epidemiologically from lumbar disc herniation — later onset, stronger dependence on uncovertebral and foraminal anatomy, and a closer association with systemic comorbidities in clinical series [ref]. Third, the cervical endpoint is roughly half the size of the lumbar endpoint, so a single significant protein may partly reflect power: an OR of 0.91 would not have been detectable in the cervical analysis for most of the proteins that were significant in the lumbar analysis.
+First, the genetic architecture of the CLPS signal points toward metabolism rather than structure: in Open Targets its dominant associations are hypothyroidism and myxoedema (0.39), with weaker signals for hypertriglyceridaemia and hyperlipoproteinaemia. Second, cervical disc disease differs epidemiologically from lumbar disc herniation: it presents later and depends more on uncovertebral and foraminal anatomy [10], and in the clinical setting it appears more closely associated with systemic metabolic comorbidity — a contrast we could not find a study that tests directly. Third, the cervical endpoint is roughly half the size of the lumbar endpoint, so a single significant protein may partly reflect power: an OR of 0.91 would not have been detectable in the cervical analysis for most of the proteins that were significant in the lumbar analysis.
 
-The testable hypothesis is therefore that the cervical phenotype is more tightly coupled to systemic metabolic state than the lumbar phenotype. This is consistent with the broader literature linking dyslipidaemia, thyroid status and diabetes to disc degeneration [ref], and it is falsifiable with data we do not have: paired metabolic phenotyping of cervical and lumbar surgical cohorts. An alternative reading, which we regard as equally defensible on current evidence, is that the 6p21.31 signal tags a neighbouring gene rather than CLPS itself — the interval is gene-dense and colocalization cannot distinguish the target gene from a tightly linked neighbour. We report CLPS because the colocalization is strong and because the site specificity is the paper's most distinctive observation, not because we believe colipase causes cervical spondylosis.
+The testable hypothesis is therefore that the cervical phenotype is more tightly coupled to systemic metabolic state than the lumbar phenotype. This is consistent with the broader literature linking dyslipidaemia, thyroid status and diabetes to disc degeneration [11], and it is falsifiable with data we do not have: paired metabolic phenotyping of cervical and lumbar surgical cohorts. An alternative reading, which we regard as equally defensible on current evidence, is that the 6p21.31 signal tags a neighbouring gene rather than CLPS itself — the interval is gene-dense and colocalization cannot distinguish the target gene from a tightly linked neighbour. We report CLPS because the colocalization is strong and because the site specificity is the paper's most distinctive observation, not because we believe colipase causes cervical spondylosis.
 
 ### 4.6 IGFBP3: the value of a negative colocalization
 
@@ -195,7 +198,7 @@ The methodological implication is not that MR is uninformative, but that MR with
 
 Three studies define the current landscape, and the contribution of this work is best stated as the intersection that none of them occupies.
 
-The largest previous proteome-wide MR in disc degeneration screened 4,907 proteins against a composite IVDD phenotype and identified candidate proteins without site resolution [ref]. A recent multi-omic MR study combined MR, colocalization, SMR and PheWAS against pan-IVDD and reported BMP6 and DLK1 [ref]; methodologically it is more complete than ours in several respects, and its BMP6 finding we independently reproduce. A Chinese-language study screened 91 inflammatory proteins against a cervical-specific endpoint derived from an earlier FinnGen release, without colocalization [ref]; it established that the cervical phenotype is analysable but left the protein panel and the causal inference thin.
+The largest previous proteome-wide MR in disc degeneration screened 4,907 proteins against a composite IVDD phenotype and identified candidate proteins without site resolution [12]. A recent multi-omic MR study combined MR, colocalization, SMR and PheWAS against pan-IVDD and reported BMP6 and DLK1 [4]; methodologically it is more complete than ours in several respects, and its BMP6 finding we independently reproduce. A third study screened 91 circulating inflammatory proteins against cervical spondylosis and other spinal degenerative phenotypes using genetic correlation and MR, without colocalization [13]; it established that the cervical phenotype is analysable but left the protein panel and the causal inference thin.
 
 What none of the three does is compare sites within one analytic framework using a full protein panel with colocalization. That comparison is what produces the two findings we regard as novel: complete non-overlap of cervical and lumbar signatures, and a severity-stratified mechanotransduction cluster. The price of occupying that intersection is that each individual component is not new, which is also why the window for this specific analysis is likely to be short.
 
@@ -203,7 +206,7 @@ What none of the three does is compare sites within one analytic framework using
 
 None of the five supported targets has an approved drug or a clinical-stage candidate in Open Targets, which is the point of target-prioritisation work but also a warning about timelines. Two practical considerations shape how these proteins could be pursued.
 
-The first is **direction**. Three of the five (DAG1, DSG2, CLPS) are protective, meaning that the therapeutic direction would be to increase protein function. Pharmacology has far fewer tools for gain-of-function than for inhibition: there are no general agonists for desmosomal cadherins, and restoring dystroglycan function means restoring glycosylation, which is an enzyme-level problem rather than a ligand-level one. BMP6, by contrast, is risk-increasing, and the BMP axis has an established modality landscape — BMP-2 biologics are in routine use in spine fusion, and BMP-pathway inhibitors are in clinical development for other indications [ref]. On directional grounds alone, BMP6 is the most tractable target in this set, and the one for which a disc-directed biologic is easiest to imagine.
+The first is **direction**. Three of the five (DAG1, DSG2, CLPS) are protective, meaning that the therapeutic direction would be to increase protein function. Pharmacology has far fewer tools for gain-of-function than for inhibition: there are no general agonists for desmosomal cadherins, and restoring dystroglycan function means restoring glycosylation, which is an enzyme-level problem rather than a ligand-level one. BMP6, by contrast, is risk-increasing, and the BMP axis has an established modality landscape — BMP-2 biologics are in routine use in spine fusion, and BMP-pathway antagonists are an active area of drug development for other indications [6,14]. On directional grounds alone, BMP6 is the most tractable target in this set, and the one for which a disc-directed biologic is easiest to imagine.
 
 The second is **safety**, and it must be stated plainly rather than buried in a supplementary table. The mechanotransduction proteins are simultaneously the most biologically compelling and the most systemically risky: SCN4B carries 19 recorded safety liabilities with dominant associations to familial atrial fibrillation (0.63) and long-QT syndrome 10 (0.49); DSG2 is the gene for arrhythmogenic right ventricular cardiomyopathy (0.81) and dilated cardiomyopathy (0.71); DAG1 is the gene for limb-girdle muscular dystrophy type 2P (0.79) and dystroglycanopathy (0.74). A systemic modulator of any of these would carry cardiac, muscular or neurological risk that no disc indication could justify. This asymmetry — the targets with the best genetic evidence being the ones least suited to systemic modulation — is itself a finding worth reporting, because it argues that disc-targeted delivery (intradiscal injection, depot formulations, or locally restricted vectors) is not a convenience but a requirement for this class of target.
 
@@ -235,15 +238,15 @@ Genetic evidence from 2,058 circulating proteins prioritises two coherent target
 
 ## Declarations
 
-## Ethics approval and consent to participate
+### Ethics approval and consent to participate
 
 Not applicable. This study is a secondary analysis of publicly available, de-identified summary-level genetic association data. No individual-level data were accessed, and no new human participants or animals were involved. All original studies obtained ethics approval and informed consent from their participants, as described in the primary publications and data-source documentation (Supplementary Table S1).
 
-## Consent for publication
+### Consent for publication
 
 Not applicable.
 
-## Availability of data and materials
+### Availability of data and materials
 
 All data analysed in this study are publicly available; no new data were generated. The datasets and their exact accessions, versions and download locations are listed in Supplementary Table S1 and documented in the repository (`docs/DATA_SOURCES.md`):
 
@@ -254,7 +257,7 @@ All data analysed in this study are publicly available; no new data were generat
 
 Access to UK Biobank individual-level data is governed by the UK Biobank Access Management System; the present work used only summary statistics released by the primary studies and therefore required no additional application.
 
-## Code availability
+### Code availability
 
 The complete analysis chain — instrument extraction, proteome-wide Wald-ratio MR, regional summary-statistic retrieval, colocalization, prior-sensitivity analysis, Steiger directionality, severity stratification, figure and table generation, and Open Targets annotation — is available at:
 
@@ -262,15 +265,15 @@ The complete analysis chain — instrument extraction, proteome-wide Wald-ratio 
 
 A frozen release of the code corresponding exactly to the version used for this manuscript is archived at Zenodo: **[TODO: DOI]**. Scripts are written in R 4.4.1 (coloc 5.2.3, data.table 1.18.4, readxl 1.5.0) and Python ≥3.9 (standard library only); the full session record is provided as `env/session_info.txt`.
 
-## Competing interests
+### Competing interests
 
 The authors declare that they have no competing interests.
 
-## Funding
+### Funding
 
 The authors received no specific funding for this work.
 
-## Authors' contributions (CRediT)
+### Authors' contributions (CRediT)
 
 | Author | Roles |
 |---|---|
@@ -281,43 +284,62 @@ The authors received no specific funding for this work.
 
 All authors read and approved the final manuscript and agree to be accountable for all aspects of the work.
 
-## Acknowledgements
+### Acknowledgements
 
 None.
 
-## Use of artificial intelligence
+### Use of artificial intelligence
 
 The authors used an AI-assisted analysis environment to develop and debug the analysis code and to draft and revise sections of the manuscript text. All analytical decisions, the interpretation of results, and the final content were reviewed, verified and approved by the authors, who take full responsibility for the content of this publication. No AI tool is listed as an author, and no AI tool was used to generate or alter any figure data.
 
 ---
 
+## References
+
+1. Chen CN, Chang HI, Yen CK, Liu WL, Huang KY. Mechanical Stretch Induced Osteogenesis on Human Annulus Fibrosus Cells through Upregulation of BMP-2/6 Heterodimer and Activation of P38 and SMAD1/5/8 Signaling Pathways. Cells. 2022;11(16):2600. doi:10.3390/cells11162600
+2. Wu M, Wu S, Chen W, Li YP. The roles and regulatory mechanisms of TGF-β and BMP signaling in bone and cartilage development, homeostasis and disease. Cell Res. 2024;34(2):101-123. doi:10.1038/s41422-023-00918-9
+3. Zieba J, Forlenza KN, Heard K, Martin JH, Bosakova M, Cohn DH, et al. Intervertebral disc degeneration is rescued by TGFβ/BMP signaling modulation in an ex vivo filamin B mouse model. Bone Res. 2022;10(1):37. doi:10.1038/s41413-022-00200-5
+4. Kan S, Liu W, Li P, Zhou M, Yu H, Zheng Y, et al. Multi-omics Mendelian randomization prioritizes BMP6 as a candidate therapeutic target in intervertebral disc degeneration. J Orthop Surg Res. 2026;21(1):272. doi:10.1186/s13018-026-06762-y
+5. Sakuta H, Suzuki R, Takahashi H, Kato A, Shintani T, Iemura Si, et al. Ventroptin: a BMP-4 antagonist expressed in a double-gradient pattern in the retina. Science. 2001;293(5527):111-115. doi:10.1126/science.1058379
+6. Brazil DP, Church RH, Surae S, Godson C, Martin F. BMP signalling: agony and antagony in the family. Trends Cell Biol. 2015;25(5):249-264. doi:10.1016/j.tcb.2014.12.004
+7. Walimbe AS, Muntoni F, Campbell KP. Clinical presentations and pathophysiological mechanisms of dystroglycanopathy: advancing therapeutic strategies. Lancet Neurol. 2026;25(7):689-700. doi:10.1016/s1474-4422(26)00191-2
+8. Shimizu H, Tosaki A, Ohsawa N, Ishizuka-Katsura Y, Shoji S, Miyazaki H, et al. Parallel homodimer structures of the extracellular domains of the voltage-gated sodium channel β4 subunit explain its role in cell-cell adhesion. J Biol Chem. 2017;292(32):13428-13440. doi:10.1074/jbc.m117.786509
+9. Malhotra JD, Kazen-Gillespie K, Hortsch M, Isom LL. Sodium channel beta subunits mediate homophilic cell adhesion and recruit ankyrin to points of cell-cell contact. J Biol Chem. 2000;275(15):11383-11388. doi:10.1074/jbc.275.15.11383
+10. Badhiwala JH, Ahuja CS, Akbar MA, Witiw CD, Nassiri F, Furlan JC, et al. Degenerative cervical myelopathy - update and future directions. Nat Rev Neurol. 2020;16(2):108-124. doi:10.1038/s41582-019-0303-0
+11. Zhang H, Tian J, Lu Y, Yu D, Wu H, Lu Y, et al. Causal links between multi-domain risk factors and intervertebral disc degeneration: a systematic review and meta-analysis of Mendelian randomization studies. BMC Musculoskelet Disord. 2026;27(1):668. doi:10.1186/s12891-026-10040-7
+12. Ren BW, Liu YH, Wu JH, An BC, Liu QZ, Liu CY, et al. Causal effects of plasma proteome on intervertebral disc degeneration: a comprehensive mendelian randomization study. Eur Spine J. 2025;34(1):316-325. doi:10.1007/s00586-024-08551-9
+13. Zheng Q, Lin R, Wang D, Zheng C, Xu W. Effects of circulating inflammatory proteins on spinal degenerative diseases: Evidence from genetic correlations and Mendelian randomization study. JOR Spine. 2024;7(2):e1346. doi:10.1002/jsp2.1346
+14. May RD, Frauchiger DA, Albers CE, Tekari A, Benneker LM, Klenke FM, et al. Application of Cytokines of the Bone Morphogenetic Protein (BMP) Family in Spinal Fusion - Effects on the Bone, Intervertebral Disc and Mesenchymal Stromal Cells. Curr Stem Cell Res Ther. 2019;14(8):618-643. doi:10.2174/1574888x14666190628103528
+
+---
+
 ## Figure legends
 
-## Figure 1
+### Figure 1
 
 **Proteome-wide cis-Mendelian randomization of plasma proteins against three intervertebral disc phenotypes.**
 
 Forest plot of the eleven protein–outcome associations that passed Bonferroni correction (P < 1.71 × 10⁻⁵) among 2,058 proteins with valid cis-pQTL instruments. Points show the Wald-ratio estimate of the log odds ratio per 1-SD genetically predicted increase in plasma protein level; horizontal bars are 95% confidence intervals. Colours denote the outcome: cervical disc disorder (17,993 cases; red), lumbar disc herniation (35,290 cases; blue) and surgically treated disc herniation (4,559 cases; green). Numeric OR (95% CI) values are given at the right. The dashed vertical line marks the null. Proteins reaching significance for more than one phenotype are labelled with the phenotype in parentheses. All estimates are derived from a single lead cis variant per protein; confidence intervals are therefore not adjusted for instrument selection.
 
-## Figure 2
+### Figure 2
 
 **Colocalization of plasma protein and disc disorder signals at five supported loci.**
 
 For each protein–outcome pair, the left panel shows the cis-pQTL association (−log₁₀ *P*) and the right panel the corresponding outcome association (−log₁₀ *P*) across the ±1 Mb region surrounding the lead pQTL, plotted against chromosomal position (Mb, hg38). Each row is one pair: SCN4B (lumbar), CLPS (cervical), BMP6 (lumbar), DAG1 (lumbar) and DSG2 (lumbar), ordered as in Table 2. The horizontal dotted line marks genome-wide significance (P = 5 × 10⁻⁸). Posterior probabilities of a shared causal variant (PP.H4) and of two distinct causal variants (PP.H3) from `coloc.abf` at the default prior (p12 = 1 × 10⁻⁵) are annotated in the lower-left corner of each outcome panel. Variants were restricted to those present in both datasets after allele harmonisation (3,555–8,639 variants per pair); palindromic variants with allele frequency between 0.42 and 0.58 were removed.
 
-## Figure 3
+### Figure 3
 
 **Sensitivity of colocalization evidence to the prior probability of a shared causal variant.**
 
 PP.H4 is plotted for each protein–outcome pair at three values of the `coloc.abf` prior p12 (1 × 10⁻⁶, 1 × 10⁻⁵, 1 × 10⁻⁴), connected within each pair. The dotted line at 0.8 marks the prespecified threshold for supportive evidence; the dashed line at 0.5 marks equipoisse between hypotheses. SCN4B and CLPS remain above 0.8 at all three priors; BMP6 exceeds 0.8 at the default and liberal priors; DAG1 and DSG2 reach the threshold only at p12 ≥ 1 × 10⁻⁵ and are therefore reported as moderate-confidence candidates. IGFBP3 remains below 0.2 at all priors, consistent with the two distinct causal variants indicated by its high PP.H3.
 
-## Figure 4
+### Figure 4
 
 **Cross-phenotype comparison of colocalization-supported proteins.**
 
 Odds ratios (log scale) for cervical disc disorder (red), lumbar disc herniation (blue) and surgically treated disc herniation (green) per 1-SD genetically predicted protein level, shown for the five colocalization-supported proteins together with CHRDL1 (MR-level evidence only) and IGFBP3 (refuted by colocalization, shown for comparison). Horizontal bars are 95% confidence intervals. Because surgically treated cases are a subset of all lumbar disc herniation cases, the three estimates for a given protein are correlated and are compared descriptively rather than tested for between-group difference. DAG1 shows a monotonic decline in OR across increasing phenotypic severity (0.56 → 0.55 → 0.36); the confidence interval for the operated group (0.19–0.70) overlaps that of all lumbar herniation (0.43–0.71), so the gradient is a point-estimate trend and is interpreted as hypothesis-generating.
 
-## Supplementary tables (for the legend list in the submission system)
+### Supplementary tables (for the legend list in the submission system)
 
 | Item | Content |
 |---|---|
