@@ -1,0 +1,9 @@
+Protein	Outcome	cis region	N_SNP	PP.H4 (p12=1e-6)	PP.H4 (p12=1e-5)	PP.H4 (p12=1e-4)	PP.H3	Steiger direction	Tractability (SM)	Tractability (AB)	Clinical candidates	Safety liabilities	Verdict
+SCN4B	Lumbar disc herniation	chr11:118142548	6999	0.973	0.997	1	0.002	pQTL->IVDD	Structure with Ligand	UniProt loc high conf; GO CC high conf; UniProt SigP or TMHMM	0	19	Strong (robust)
+CLPS	Cervical disc disorder	chr6:35785450	6777	0.818	0.978	0.998	0.012	pQTL->IVDD	""	UniProt loc high conf; GO CC high conf; UniProt SigP or TMHMM	0	0	Strong (robust)
+BMP6	Lumbar disc herniation	chr6:7719826	8639	0.627	0.944	0.994	0.056	pQTL->IVDD	Med-Quality Pocket	UniProt loc high conf; UniProt SigP or TMHMM; GO CC med conf	0	0	Strong
+DAG1	Lumbar disc herniation	chr3:49435644	3555	0.365	0.852	0.983	0.145	pQTL->IVDD	Structure with Ligand	UniProt loc high conf; GO CC high conf; UniProt loc med conf; UniProt SigP or TMHMM; Human Protein Atlas loc	0	0	Moderate
+DSG2	Lumbar disc herniation	chr18:31504458	6971	0.34	0.837	0.981	0.087	pQTL->IVDD	High-Quality Pocket	UniProt loc high conf; GO CC high conf; UniProt SigP or TMHMM	0	0	Moderate
+IGFBP3	Surgically treated disc herniation	chr7:45921046	8375	0.015	0.135	0.61	0.865	pQTL->IVDD	Druggable Family	UniProt loc high conf; GO CC high conf; UniProt SigP or TMHMM	0	0	Distinct signals (H3)
+IGFBP3	Lumbar disc herniation	chr7:45921046	8375	0.003	0.025	0.204	0.975	pQTL->IVDD	Druggable Family	UniProt loc high conf; GO CC high conf; UniProt SigP or TMHMM	0	0	Distinct signals (H3)
+MST1	Lumbar disc herniation	chr3:49668079	527	0.002	0.023	0.19	0.068	pQTL->IVDD	""	""	0	0	Weak/insufficient

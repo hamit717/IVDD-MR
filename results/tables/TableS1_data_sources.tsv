@@ -1,0 +1,11 @@
+Protein	UniProt	cis_gene	lead_variant	position_hg38	F_statistic	GWAS_Catalog_accession	Availability
+CLPS	P04118	CLPS	rs2766588	chr6:35785450	6553	GCST90468786	Available; coloc performed
+IGFBP3	P17936	IGFBP3	rs2854746	chr7:45921046	5612	GCST90469529	Available; coloc performed (2 endpoints)
+HLA-E	P13747	HLA-E	rs2853999	chr6:31358297	2512	—	Not available on EBI; MR only
+CHRDL1	Q9BU40	CHRDL1	rs5942957	chr23:110535177	4052	GCST90468750	File available but autosomes only; lead pQTL on chrX -> coloc not possible
+BMP6	P22004	BMP6	rs12198986	chr6:7719826	507	GCST90468454	Available; coloc performed
+SCN4B	Q8IWT1	SCN4B	rs35632913	chr11:118142548	9675	GCST90470551	Available; coloc performed
+DAG1	Q14118	DAG1	rs6446277	chr3:49435644	92	GCST90468943	Available; coloc performed
+KHK	P50053	KHK	rs2304681	chr2:27092384	4641	—	Accession 404 at time of access; MR only
+MST1	P26927	MST1	rs9823546	chr3:49668079	23129	GCST90469952	Available; coloc performed (insufficient SNP overlap)
+DSG2	Q14126	DSG2	rs1841396	chr18:31504458	1258	GCST90469042	Available; coloc performed

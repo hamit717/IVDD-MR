@@ -1,0 +1,6 @@
+91042cbe830d7ec0cae055e6d4c8003f  finngen_R12_M13_CERVICDISC.gz
+42205fc1836b42f01c59767cb0729879  finngen_R12_M13_EARLY_LUMBAR_PROLAPSE.gz
+23f25059c41643943ad0c20e3ac84390  finngen_R12_M13_LUMBAR_PROLAPSE.gz
+aeb2acdc5586034e91197658a10a7d70  data/pqtl/sun2023_MOESM3.xlsx
+63b315ca2fd03fcfbbd13c0fbd498c08  data/pqtl/protein_gcst_map.tsv
+6a017554b44995ed42d3d44c43fde5a9  data/pqtl/gwas_studies_full.tsv

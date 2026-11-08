@@ -1,0 +1,28 @@
+# ---- Large / regenerable inputs (download per docs/DATA_SOURCES.md) ----
+data/finngen/*.gz
+data/pqtl/*.xlsx
+data/pqtl/gwas_studies_full.tsv
+data/ld/*
+
+# ---- Regenerable intermediates ----
+results/coloc/outcome_*.tsv
+results/coloc/exposure_*.tsv
+
+# ---- R / Python ----
+.Rproj.user/
+.Rhistory
+.RData
+.Rapp.history
+__pycache__/
+*.pyc
+.Rlibs/
+
+# ---- OS / editor ----
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+
+# ---- Misc ----
+*.log
