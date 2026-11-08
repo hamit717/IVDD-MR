@@ -8,10 +8,11 @@
 # 也可以预先设好环境变量后非交互运行：
 #     GITHUB_USER=xxx GITHUB_TOKEN=ghp_xxx bash scripts/publish_to_github.sh
 #
-# 令牌要求（GitHub → Settings → Developer settings → Personal access tokens）：
-#   · Fine-grained token，Repository access 选 All repositories 或仅 IVDD-MR
-#   · Permissions: Contents = Read and write；Administration = Read and write（要新建仓库才需要）
-#   · 有效期建议 7 天，推完就可以删除
+# 令牌要求（最简单：Classic token）
+#   Settings → Developer settings → Personal access tokens → Tokens (classic)
+#   → Generate new token (classic) → 勾选 scope: repo → 有效期 7 天
+# 若用 Fine-grained token，则需要：Repository access = All repositories，
+#   且 Repository permissions 里 Contents 与 Administration 均为 Read and write。
 # ============================================================
 set -euo pipefail
 
@@ -52,7 +53,10 @@ if [[ "$code" == "201" ]]; then
 elif [[ "$code" == "422" ]]; then
   echo "• 仓库已存在，继续推送"
 else
-  echo "✗ 建仓库失败（HTTP $code）：" >&2; cat /tmp/gh_repo.json >&2; exit 1
+  echo "✗ 建仓库失败（HTTP $code）：" >&2; cat /tmp/gh_repo.json >&2
+  echo "  提示：多半是令牌没有建仓库权限。可先在网页手动建一个空的 $REPO_NAME 仓库" >&2
+  echo "  （不要勾选 README / .gitignore / license），然后重跑本脚本，会直接推送。" >&2
+  exit 1
 fi
 
 # ---- 2. 配置 remote 并推送 ----
