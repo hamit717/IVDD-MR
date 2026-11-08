@@ -8,11 +8,15 @@
 ## A. 必须完成（缺一项就会被编辑部退回）
 
 ### A1. 代码仓库上线并回填 URL
-- [ ] 在 GitHub 建仓库，推 `IVDD-MR/`（`.gitignore` 已排除大文件，推上去约 1–2 MB）
-- [ ] 建议同时打 Zenodo release 拿 DOI（期刊现在普遍要求"frozen release"）
-- [ ] 回填两处：`docs/Manuscript_Methods_Results_v0.1.md` 的 Software 段、`README.md` 的 Contact 段
+- [x] 稿件、声明、图注、LICENSE、README 已备齐（2026-11-08）
+- [ ] **一步推上 GitHub**：在「终端」App 里运行
+      `bash ~/WorkBuddy/2026-11-07-22-16-25/IVDD-MR/scripts/publish_to_github.sh`
+      脚本会问用户名 + Personal Access Token，自动建仓库、推送、并打印回填命令
+- [ ] 回填 URL：`python3 scripts/set_repo_url.py <用户名>`
+- [ ] 打 release 拿 DOI：GitHub → Releases → New（tag `v1.0.0`），再用 Zenodo 授权，然后
+      `python3 scripts/set_repo_url.py <用户名> --doi 10.5281/zenodo.xxxxxxx`
 
-### A2. 参考文献（9 处正文 `[ref]`）
+### A2. 参考文献（13 处正文 `[ref]`）
 | 位置 | 需要什么样的文献 |
 |---|---|
 | 4.2 段1 | BMP6 → SMAD1/5/8、软骨细胞肥大与基质矿化（椎间盘或软骨，1–2 篇） |
@@ -27,12 +31,20 @@
 
 > 知网/PubMed 检索式在开工包里；三条对照研究建议直接读原文核对方位，不要只按我此前的二手描述引用。
 
-### A3. 投稿要件
-- [ ] Author contributions（CRediT 格式）
-- [ ] Funding / Competing interests（本分析全部使用公开汇总数据，无利益冲突需如实声明）
-- [ ] Data availability 声明（GWAS Catalog accession + FinnGen R12 endpoint ID + 仓库 URL，草稿已在 `docs/DATA_SOURCES.md`，可直接改写）
-- [ ] Figure legends（4 张图，我可以起草）
-- [ ] 补充材料清单：Table S1（已生成）、S2（已生成）、S3（已生成）
+### A3. 投稿要件（已起草，待你确认/填空）
+- [x] Author contributions（CRediT，4 人）→ `docs/Declarations_v1.0.md`
+- [x] Funding / Competing interests / Acknowledgements → 同上
+- [x] Data availability / Code availability → 同上
+- [x] AI 使用声明（Springer Nature 强制项）→ 同上
+- [x] Figure legends（4 张）→ `docs/Figure_legends_v1.0.md`
+- [x] 标题页（标题、跑题、作者、单位、邮箱、关键词）→ `docs/TitlePage_v1.0.md`
+- [x] LICENSE（MIT + 图表 CC BY 4.0）
+- [ ] **4 个 ORCID**（通讯作者必填）
+- [ ] 通讯电话（投稿系统必填，不进正文）
+- [ ] 核对通讯邮箱 `hmtspine@163.com`（你原文写成 `163com`）
+- [ ] 核对门牌地址（No. 555 East Youyi Road, Beilin District 是我补的）
+- [ ] 确认 CRediT 分工与实际一致；是否标共同一作
+- [ ] 确认 License 选择（默认 MIT，若想用 Apache-2.0 / GPL-3.0 现在改）
 
 ### A4. 撞车复查
 - [ ] 投稿前 3 天内跑一次 PubMed 检索（检索式见开工包），确认"部位细分 × 蛋白组 × 共定位"仍无人发表
@@ -73,12 +85,16 @@
 | 内容 | 文件 |
 |---|---|
 | 完整投稿稿（读这个） | `docs/Manuscript_v0.2.md` |
+| 标题页（标题/作者/单位/邮箱/关键词） | `docs/TitlePage_v1.0.md` |
 | Methods + Results 编辑入口 | `docs/Manuscript_Methods_Results_v0.1.md` |
 | Discussion 编辑入口 + 审核要点 | `docs/Discussion_v1.0.md` |
+| 声明（伦理/数据/代码/基金/COI/CRediT/AI） | `docs/Declarations_v1.0.md` |
+| 图注（Fig 1–4 + 补充表清单） | `docs/Figure_legends_v1.0.md` |
 | 数据来源与校验和 | `docs/DATA_SOURCES.md` |
 | 表 S1（数据可得性） | `results/tables/TableS1_data_sources.tsv` |
 | 表 S2（靶点注释） | `results/tables/TableS2_target_annotation.tsv` |
 | 表 S3（跨端点） | `results/tables/TableS3_cross_endpoint.tsv` |
 
-> 改了 Methods/Results 或 Discussion 后，重新运行 `python3 scripts/assemble_manuscript.py` 更新合并稿。
+> 改了上面任一文件后，运行 `python3 scripts/assemble_manuscript.py` 更新合并稿。
 > 不要手工复制粘贴，否则两份文件的数字会分叉——这是这类稿子最常见的低级错误。
+> 标题页/声明/图注三个文件里的中文批注都写在 `>` 引用块中，组装时整段删除，不会混进英文稿。

@@ -105,12 +105,29 @@ All input data are public: UKB-PPP cis-pQTL summary statistics (Sun et al. 2023,
 
 ## Citation
 
-Manuscript in preparation. If you use this code, please cite the paper (details to be added on acceptance) and the primary data sources listed in `docs/DATA_SOURCES.md`.
+Manuscript in preparation:
+
+> Zhu J, Guan J, Wang S, Abudouaini H. Site-resolved plasma proteome-wide Mendelian randomization identifies a BMP-axis pair and a mechanotransduction cluster for lumbar disc herniation, with a distinct metabolic signal in cervical disc disorder. *Manuscript in preparation* (2026).
+
+If you use this code, please cite the paper (journal and DOI to be added on acceptance) and the primary data sources listed in `docs/DATA_SOURCES.md`.
 
 ## License
 
-To be set by the authors (MIT for code and CC-BY-4.0 for figures are the conventional choices for this kind of repository).
+Code is released under the MIT License; figures, tables and the text of the manuscript are released under CC BY 4.0.
 
 ## Contact
 
-Corresponding author: *to be added*.
+Haimiti Abudouaini, MD — Department of Spine Surgery, Honghui Hospital, Xi'an Jiaotong University, Xi'an, Shaanxi 710054, China. E-mail: hmtspine@163.com
+
+Jinwen Zhu — jeven801208@163.com · Jianbin Guan — Guanjianbin119@outlook.com · Sibo Wang — wangsbspine1@163.com
+
+## Authors and contributions
+
+| Author | CRediT roles |
+|---|---|
+| Jinwen Zhu | Conceptualization; Data curation; Formal analysis; Methodology; Software; Visualization; Writing – original draft |
+| Jianbin Guan | Data curation; Investigation; Validation; Writing – review & editing |
+| Sibo Wang | Formal analysis; Methodology; Validation; Writing – review & editing |
+| Haimiti Abudouaini | Conceptualization; Supervision; Resources; Project administration; Writing – review & editing |
+
+Full declarations (ethics, funding, competing interests, AI use) are in `docs/Declarations_v1.0.md`.

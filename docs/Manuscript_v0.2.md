@@ -1,30 +1,53 @@
-# Manuscript v0.2 (assembled) — Title / Abstract / Methods / Results / Discussion
+# Manuscript v0.2 (assembled) — Title page / Abstract / Methods / Results / Discussion / Declarations / Legends
 
-> 自动生成文件，请勿直接编辑。改动请改 `Manuscript_Methods_Results_v0.1.md` 或 `Discussion_v1.0.md`，
-> 然后运行 `python3 scripts/assemble_manuscript.py` 重新组装。
+> 自动生成文件，请勿直接编辑。改动请改 `docs/` 下的 5 个编辑入口，然后运行
+> `python3 scripts/assemble_manuscript.py` 重新组装（入口清单见脚本头部注释）。
 > 剩余待办见 `docs/TODO_before_submission.md`；`[ref]` 与 `[TODO]` 需在投稿前清零。
 
+## Title
+
+**Site-resolved plasma proteome-wide Mendelian randomization identifies a BMP-axis pair and a mechanotransduction cluster for lumbar disc herniation, with a distinct metabolic signal in cervical disc disorder**
+
+**Running title:** Site-resolved proteome-wide MR of disc disorders
+
+## Authors
+
+Jinwen Zhu^1^, Jianbin Guan^1^, Sibo Wang^1^, Haimiti Abudouaini^1^,\*
+
+**Affiliations**
+
+^1^ Department of Spine Surgery, Honghui Hospital, Xi'an Jiaotong University, No. 555 East Youyi Road, Beilin District, Xi'an, Shaanxi Province 710054, China
+
+\* **Correspondence:** Haimiti Abudouaini, MD, Department of Spine Surgery, Honghui Hospital, Xi'an Jiaotong University, No. 555 East Youyi Road, Beilin District, Xi'an, Shaanxi Province 710054, China. E-mail: hmtspine@163.com. Tel: [TODO: telephone number]
+
+**E-mail addresses of all authors**
+
+- Jinwen Zhu — jeven801208@163.com
+- Jianbin Guan — Guanjianbin119@outlook.com
+- Sibo Wang — wangsbspine1@163.com
+- Haimiti Abudouaini — hmtspine@163.com
+
+**ORCID iDs**
+
+- Jinwen Zhu — [TODO: 0000-0000-0000-0000]
+- Jianbin Guan — [TODO]
+- Sibo Wang — [TODO]
+- Haimiti Abudouaini — [TODO]
+
+## Manuscript metrics
+
+| Item | Value |
+|---|---|
+| Abstract | 307 words (structured) |
+| Main text (Introduction–Discussion) | ~4,700 words |
+| Tables | 2 main (Table 1, Table 2) + 3 supplementary (S1–S3) |
+| Figures | 4 main (Fig 1–4), 300 dpi |
+| References | [TODO: reference numbering] |
+| Keywords | intervertebral disc degeneration; lumbar disc herniation; cervical disc disorder; Mendelian randomization; colocalization; plasma proteomics; drug target prioritization |
+
 ---
 
-# Manuscript Draft v0.1 — Methods & Results (English)
-
-> 状态：v0.1 骨架，数字全部来自实际运行结果（2026-11-08）。
-> 未清项以 **[TODO]** 标注（投稿前需清零，清单见 `TODO_before_submission.md`）。目标期刊：Arthritis Research & Therapy / The Spine Journal / Osteoarthritis and Cartilage。
-
----
-
-## Proposed title (working)
-
-**Plasma proteome-wide Mendelian randomization identifies SCN4B, BMP6, DAG1, DSG2 and CLPS as genetically supported causal proteins for intervertebral disc degeneration, with site-specific evidence for cervical disc disease**
-
-备选（更保守）：
-Proteome-wide cis-Mendelian randomization and colocalization identify circulating proteins associated with lumbar and cervical intervertebral disc disorders in FinnGen.
-
----
-
----
-
-## Abstract (skeleton, 数字已核对)
+## Abstract
 
 **Background**: Intervertebral disc degeneration (IVDD) lacks disease-modifying drugs. Plasma proteomics linked to genetics can prioritize drug targets.
 **Methods**: We performed proteome-wide Mendelian randomization (MR) of 2,058 circulating proteins (cis-pQTL instruments, all F-statistic >10) against three imaging-independent clinical endpoints in FinnGen release 12: cervical disc disorder (17,993 cases), lumbar disc prolapse (35,290 cases), and operated lumbar disc prolapse (4,559 cases). Bonferroni significance was defined at P < 1.71×10⁻⁵. Candidate proteins were interrogated with Bayesian colocalization (coloc.abf), prior-sensitivity analyses, and Steiger directionality, and annotated for tractability using Open Targets.
@@ -207,3 +230,97 @@ Several limitations constrain interpretation.
 ### 4.10 Conclusion
 
 Genetic evidence from 2,058 circulating proteins prioritises two coherent target sets for lumbar disc herniation — a BMP-axis pair in which the ligand raises and its endogenous antagonist lowers risk (BMP6, CHRDL1), and a mechanotransduction cluster of matrix and junctional proteins that are protective and whose protection strengthens with surgical severity (DAG1, DSG2, SCN4B) — while identifying a metabolically oriented, site-specific signal for cervical disc disorder (CLPS) that does not overlap with the lumbar signature. The same analysis shows that its own strongest signal, IGFBP3, does not survive colocalization, and that MR without colocalization would have produced a confidently wrong target. The immediate value of these results is to convert a common clinical intuition — that disc failure is a failure of load-bearing connections — into named, testable, and currently unoccupied molecular targets; their immediate caution is that the proteins with the best genetic support are also the ones least suitable for systemic modulation.
+
+---
+
+## Declarations
+
+## Ethics approval and consent to participate
+
+Not applicable. This study is a secondary analysis of publicly available, de-identified summary-level genetic association data. No individual-level data were accessed, and no new human participants or animals were involved. All original studies obtained ethics approval and informed consent from their participants, as described in the primary publications and data-source documentation (Supplementary Table S1).
+
+## Consent for publication
+
+Not applicable.
+
+## Availability of data and materials
+
+All data analysed in this study are publicly available; no new data were generated. The datasets and their exact accessions, versions and download locations are listed in Supplementary Table S1 and documented in the repository (`docs/DATA_SOURCES.md`):
+
+- **Instruments** — lead cis-pQTL summary statistics from Sun et al., *Nature* 2023 (Supplementary Table 10), derived from the UK Biobank Pharma Proteomics Project.
+- **Regional exposure summary statistics** — harmonised European-ancestry UKB-PPP Olink re-analysis by Loya et al., *Nature Genetics* 2025, accessed through the EBI GWAS Catalog (accessions listed per protein in Supplementary Table S1).
+- **Outcomes** — FinnGen release 12 endpoint summary statistics for `M13_CERVICDISC`, `M13_LUMBAR_PROLAPSE` and `M13_EARLY_LUMBAR_PROLAPSE` (https://r12.finngen.fi/).
+- **Target annotation** — Open Targets Platform, queried 2026-11-08 via the public GraphQL API.
+
+Access to UK Biobank individual-level data is governed by the UK Biobank Access Management System; the present work used only summary statistics released by the primary studies and therefore required no additional application.
+
+## Code availability
+
+The complete analysis chain — instrument extraction, proteome-wide Wald-ratio MR, regional summary-statistic retrieval, colocalization, prior-sensitivity analysis, Steiger directionality, severity stratification, figure and table generation, and Open Targets annotation — is available at:
+
+**https://github.com/[TODO-github-username]/IVDD-MR**
+
+A frozen release of the code corresponding exactly to the version used for this manuscript is archived at Zenodo: **[TODO: DOI]**. Scripts are written in R 4.4.1 (coloc 5.2.3, data.table 1.18.4, readxl 1.5.0) and Python ≥3.9 (standard library only); the full session record is provided as `env/session_info.txt`.
+
+## Competing interests
+
+The authors declare that they have no competing interests.
+
+## Funding
+
+The authors received no specific funding for this work.
+
+## Authors' contributions (CRediT)
+
+| Author | Roles |
+|---|---|
+| **Jinwen Zhu** | Conceptualization; Data curation; Formal analysis; Methodology; Software; Visualization; Writing – original draft |
+| **Jianbin Guan** | Data curation; Investigation; Validation; Writing – review & editing |
+| **Sibo Wang** | Formal analysis; Methodology; Validation; Writing – review & editing |
+| **Haimiti Abudouaini** | Conceptualization; Supervision; Resources; Project administration; Writing – review & editing |
+
+All authors read and approved the final manuscript and agree to be accountable for all aspects of the work.
+
+## Acknowledgements
+
+None.
+
+## Use of artificial intelligence
+
+The authors used an AI-assisted analysis environment to develop and debug the analysis code and to draft and revise sections of the manuscript text. All analytical decisions, the interpretation of results, and the final content were reviewed, verified and approved by the authors, who take full responsibility for the content of this publication. No AI tool is listed as an author, and no AI tool was used to generate or alter any figure data.
+
+---
+
+## Figure legends
+
+## Figure 1
+
+**Proteome-wide cis-Mendelian randomization of plasma proteins against three intervertebral disc phenotypes.**
+
+Forest plot of the eleven protein–outcome associations that passed Bonferroni correction (P < 1.71 × 10⁻⁵) among 2,058 proteins with valid cis-pQTL instruments. Points show the Wald-ratio estimate of the log odds ratio per 1-SD genetically predicted increase in plasma protein level; horizontal bars are 95% confidence intervals. Colours denote the outcome: cervical disc disorder (17,993 cases; red), lumbar disc herniation (35,290 cases; blue) and surgically treated disc herniation (4,559 cases; green). Numeric OR (95% CI) values are given at the right. The dashed vertical line marks the null. Proteins reaching significance for more than one phenotype are labelled with the phenotype in parentheses. All estimates are derived from a single lead cis variant per protein; confidence intervals are therefore not adjusted for instrument selection.
+
+## Figure 2
+
+**Colocalization of plasma protein and disc disorder signals at five supported loci.**
+
+For each protein–outcome pair, the left panel shows the cis-pQTL association (−log₁₀ *P*) and the right panel the corresponding outcome association (−log₁₀ *P*) across the ±1 Mb region surrounding the lead pQTL, plotted against chromosomal position (Mb, hg38). Each row is one pair: SCN4B (lumbar), CLPS (cervical), BMP6 (lumbar), DAG1 (lumbar) and DSG2 (lumbar), ordered as in Table 2. The horizontal dotted line marks genome-wide significance (P = 5 × 10⁻⁸). Posterior probabilities of a shared causal variant (PP.H4) and of two distinct causal variants (PP.H3) from `coloc.abf` at the default prior (p12 = 1 × 10⁻⁵) are annotated in the lower-left corner of each outcome panel. Variants were restricted to those present in both datasets after allele harmonisation (3,555–8,639 variants per pair); palindromic variants with allele frequency between 0.42 and 0.58 were removed.
+
+## Figure 3
+
+**Sensitivity of colocalization evidence to the prior probability of a shared causal variant.**
+
+PP.H4 is plotted for each protein–outcome pair at three values of the `coloc.abf` prior p12 (1 × 10⁻⁶, 1 × 10⁻⁵, 1 × 10⁻⁴), connected within each pair. The dotted line at 0.8 marks the prespecified threshold for supportive evidence; the dashed line at 0.5 marks equipoisse between hypotheses. SCN4B and CLPS remain above 0.8 at all three priors; BMP6 exceeds 0.8 at the default and liberal priors; DAG1 and DSG2 reach the threshold only at p12 ≥ 1 × 10⁻⁵ and are therefore reported as moderate-confidence candidates. IGFBP3 remains below 0.2 at all priors, consistent with the two distinct causal variants indicated by its high PP.H3.
+
+## Figure 4
+
+**Cross-phenotype comparison of colocalization-supported proteins.**
+
+Odds ratios (log scale) for cervical disc disorder (red), lumbar disc herniation (blue) and surgically treated disc herniation (green) per 1-SD genetically predicted protein level, shown for the five colocalization-supported proteins together with CHRDL1 (MR-level evidence only) and IGFBP3 (refuted by colocalization, shown for comparison). Horizontal bars are 95% confidence intervals. Because surgically treated cases are a subset of all lumbar disc herniation cases, the three estimates for a given protein are correlated and are compared descriptively rather than tested for between-group difference. DAG1 shows a monotonic decline in OR across increasing phenotypic severity (0.56 → 0.55 → 0.36); the confidence interval for the operated group (0.19–0.70) overlaps that of all lumbar herniation (0.43–0.71), so the gradient is a point-estimate trend and is interpreted as hypothesis-generating.
+
+## Supplementary tables (for the legend list in the submission system)
+
+| Item | Content |
+|---|---|
+| **Table S1** | Data sources: protein, UniProt ID, GWAS Catalog accession for the regional exposure statistics, FinnGen endpoint, case/control counts, and file checksums. |
+| **Table S2** | Open Targets annotation of the ten Bonferroni-significant proteins: small-molecule and antibody tractability buckets, clinical-stage candidates, recorded safety liabilities, and associated diseases with association scores. |
+| **Table S3** | Cross-endpoint effect estimates (OR, 95% CI, P) for all Bonferroni-significant proteins across the three FinnGen endpoints. |

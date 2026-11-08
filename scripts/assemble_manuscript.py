@@ -1,9 +1,15 @@
 #!/usr/bin/env python3
-"""Assemble docs/Manuscript_v0.2.md from the two editable sources.
+"""Assemble docs/Manuscript_v0.2.md from the editable sources.
 
 Editable sources (edit these, never the assembled file):
-  docs/Manuscript_Methods_Results_v0.1.md   -> title, abstract, methods, results
+  docs/TitlePage_v1.0.md                    -> title, authors, affiliations, keywords
+  docs/Manuscript_Methods_Results_v0.1.md   -> abstract, methods, results
   docs/Discussion_v1.0.md                   -> discussion (sections 4.1-4.10)
+  docs/Declarations_v1.0.md                 -> ethics, data/code availability, funding, COI, CRediT, AI use
+  docs/Figure_legends_v1.0.md               -> figure legends + supplementary table list
+
+Lines starting with '>' in the title page / declarations / figure legends are Chinese
+editorial notes and are stripped from the assembled manuscript.
 
 Usage:  python3 scripts/assemble_manuscript.py
 """
@@ -11,10 +17,34 @@ import re
 import pathlib
 
 root = pathlib.Path(__file__).resolve().parent.parent
-mr = (root / "docs/Manuscript_Methods_Results_v0.1.md").read_text()
-dis = (root / "docs/Discussion_v1.0.md").read_text()
+read = lambda p: (root / p).read_text()
 
-title_block = mr.split("## Abstract")[0]
+
+def strip_notes(text: str, drop_first_heading: bool = True) -> str:
+    """Remove blockquote editorial notes, horizontal rules and the file's own H1."""
+    out = []
+    for line in text.splitlines():
+        s = line.strip()
+        if s.startswith(">"):
+            continue
+        if s == "---":
+            continue
+        out.append(line)
+    text = "\n".join(out)
+    if drop_first_heading:
+        text = re.sub(r"^\s*#\s.*?\n", "", text)          # drop first H1
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    # demote remaining headings by nothing: source files use ## so they merge cleanly
+    return text.strip().strip("-").strip()
+
+
+mr = read("docs/Manuscript_Methods_Results_v0.1.md")
+dis = read("docs/Discussion_v1.0.md")
+
+front = strip_notes(read("docs/TitlePage_v1.0.md"))
+decl = strip_notes(read("docs/Declarations_v1.0.md"))
+legends = strip_notes(read("docs/Figure_legends_v1.0.md"))
+
 abstract = "## Abstract" + mr.split("## Abstract")[1].split("---")[0]
 methods = "## Methods" + mr.split("## Methods")[1].split("## Results")[0]
 results = "## Results" + mr.split("## Results")[1]
@@ -23,22 +53,26 @@ results = results.split("## 工作区产物索引")[0].rstrip().rstrip("-").rstr
 disc = "## Discussion" + dis.split("## 4. Discussion")[1]
 disc = disc.split("## 审核要点")[0].rstrip().rstrip("-").rstrip()
 
-header = """# Manuscript v0.2 (assembled) — Title / Abstract / Methods / Results / Discussion
+# Figure legends file already carries its own H1-free body; give it a clean H1.
+legends = "## Figure legends\n\n" + legends
+decl = "## Declarations\n\n" + decl
 
-> 自动生成文件，请勿直接编辑。改动请改 `Manuscript_Methods_Results_v0.1.md` 或 `Discussion_v1.0.md`，
-> 然后运行 `python3 scripts/assemble_manuscript.py` 重新组装。
+header = """# Manuscript v0.2 (assembled) — Title page / Abstract / Methods / Results / Discussion / Declarations / Legends
+
+> 自动生成文件，请勿直接编辑。改动请改 `docs/` 下的 5 个编辑入口，然后运行
+> `python3 scripts/assemble_manuscript.py` 重新组装（入口清单见脚本头部注释）。
 > 剩余待办见 `docs/TODO_before_submission.md`；`[ref]` 与 `[TODO]` 需在投稿前清零。
-
----
 
 """
 
 out = "\n\n---\n\n".join([
-    header + title_block.strip(),
+    header + front,
     abstract.strip(),
     methods.strip(),
     results.strip(),
     disc.strip(),
+    decl,
+    legends,
 ]) + "\n"
 
 dest = root / "docs/Manuscript_v0.2.md"
@@ -46,4 +80,4 @@ dest.write_text(out)
 
 words = len(re.findall(r"[A-Za-z][A-Za-z'\-]+", out))
 print(f"wrote {dest.relative_to(root)}")
-print(f"  ~{words} English words | [TODO] {out.count('[TODO')} | [ref] {out.count('[ref]')}")
+print(f"  ~{words} English words | [TODO] {out.count('[TODO')} | [ref] {out.count('[ref]')} | [confirm] {out.count('[confirm')}")

@@ -1,20 +1,12 @@
-# Manuscript Draft v0.1 — Methods & Results (English)
+# Manuscript Draft v0.1 — Abstract, Methods & Results (English)
 
-> 状态：v0.1 骨架，数字全部来自实际运行结果（2026-11-08）。
+> 状态：v0.2，数字全部来自实际运行结果（2026-11-08）。
 > 未清项以 **[TODO]** 标注（投稿前需清零，清单见 `TODO_before_submission.md`）。目标期刊：Arthritis Research & Therapy / The Spine Journal / Osteoarthritis and Cartilage。
+> 标题、作者、单位已移到 `docs/TitlePage_v1.0.md`；本文件从 Abstract 开始，不再维护标题块（组装脚本已跳过本文件标题）。
 
 ---
 
-## Proposed title (working)
-
-**Plasma proteome-wide Mendelian randomization identifies SCN4B, BMP6, DAG1, DSG2 and CLPS as genetically supported causal proteins for intervertebral disc degeneration, with site-specific evidence for cervical disc disease**
-
-备选（更保守）：
-Proteome-wide cis-Mendelian randomization and colocalization identify circulating proteins associated with lumbar and cervical intervertebral disc disorders in FinnGen.
-
----
-
-## Abstract (skeleton, 数字已核对)
+## Abstract
 
 **Background**: Intervertebral disc degeneration (IVDD) lacks disease-modifying drugs. Plasma proteomics linked to genetics can prioritize drug targets.
 **Methods**: We performed proteome-wide Mendelian randomization (MR) of 2,058 circulating proteins (cis-pQTL instruments, all F-statistic >10) against three imaging-independent clinical endpoints in FinnGen release 12: cervical disc disorder (17,993 cases), lumbar disc prolapse (35,290 cases), and operated lumbar disc prolapse (4,559 cases). Bonferroni significance was defined at P < 1.71×10⁻⁵. Candidate proteins were interrogated with Bayesian colocalization (coloc.abf), prior-sensitivity analyses, and Steiger directionality, and annotated for tractability using Open Targets.
