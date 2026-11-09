@@ -46,7 +46,7 @@ Steiger directionality filtering compared variance explained in exposure versus 
 Target tractability, clinical-stage drug candidates and safety liabilities were retrieved from the Open Targets Platform via its GraphQL API (queried 2026-11-08).
 
 ### Software
-All analyses used R 4.4.1 (2024-06-14) with coloc 5.2.3, data.table 1.18.4 and readxl 1.5.0. Regional summary-statistics extraction used custom Python tooling that reads remote tabix indexes and retrieves only the BGZF blocks spanning each region, rather than downloading full summary-statistic files. Analysis code, intermediate summary tables and figure-generating scripts are available at **[TODO: repository URL — https://github.com/&lt;account&gt;/IVDD-MR]**, with a frozen release archived at submission.
+All analyses used R 4.4.1 (2024-06-14) with coloc 5.2.3, data.table 1.18.4 and readxl 1.5.0. Regional summary-statistics extraction used custom Python tooling that reads remote tabix indexes and retrieves only the BGZF blocks spanning each region, rather than downloading full summary-statistic files. Analysis code, intermediate summary tables and figure-generating scripts are available at **https://github.com/hamit717/IVDD-MR**, with a frozen release archived at submission.
 
 ---
 

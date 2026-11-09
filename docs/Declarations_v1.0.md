@@ -26,7 +26,7 @@ Access to UK Biobank individual-level data is governed by the UK Biobank Access 
 
 The complete analysis chain — instrument extraction, proteome-wide Wald-ratio MR, regional summary-statistic retrieval, colocalization, prior-sensitivity analysis, Steiger directionality, severity stratification, figure and table generation, and Open Targets annotation — is available at:
 
-**https://github.com/[TODO-github-username]/IVDD-MR**
+**https://github.com/hamit717/IVDD-MR**
 
 A frozen release of the code corresponding exactly to the version used for this manuscript is archived at Zenodo: **[TODO: DOI]**. Scripts are written in R 4.4.1 (coloc 5.2.3, data.table 1.18.4, readxl 1.5.0) and Python ≥3.9 (standard library only); the full session record is provided as `env/session_info.txt`.
 
