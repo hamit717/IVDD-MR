@@ -7,14 +7,12 @@
 
 ## A. 必须完成（缺一项就会被编辑部退回）
 
-### A1. 代码仓库上线并回填 URL
-- [x] 稿件、声明、图注、LICENSE、README 已备齐（2026-11-08）
-- [ ] **一步推上 GitHub**：在「终端」App 里运行
-      `bash ~/WorkBuddy/2026-11-07-22-16-25/IVDD-MR/scripts/publish_to_github.sh`
-      脚本会问用户名 + Personal Access Token，自动建仓库、推送、并打印回填命令
-- [ ] 回填 URL：`python3 scripts/set_repo_url.py <用户名>`
-- [ ] 打 release 拿 DOI：GitHub → Releases → New（tag `v1.0.0`），再用 Zenodo 授权，然后
-      `python3 scripts/set_repo_url.py <用户名> --doi 10.5281/zenodo.xxxxxxx`
+### A1. 代码仓库上线并回填 URL —— 已完成（2026-11-09）
+- [x] 仓库已上线：**https://github.com/hamit717/IVDD-MR**（公开，main = ff40637）
+- [x] URL 已回填至 Methods Software 段与 Declarations Code availability
+- [x] tag `v1.0.0` 已推送（Zenodo 归档用）
+- [ ] 打 release 拿 DOI：GitHub → Releases → New（选 tag `v1.0.0`），授权 Zenodo 后
+      `python3 scripts/set_repo_url.py hamit717 --doi 10.5281/zenodo.xxxxxxx`
 
 ### A2. 参考文献 —— 已完成（2026-11-08）
 - [x] 12 处引用点全部配真实文献，共 **14 条**，编号按出现顺序（Vancouver）
