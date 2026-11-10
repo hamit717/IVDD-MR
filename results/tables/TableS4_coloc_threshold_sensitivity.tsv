@@ -1,0 +1,9 @@
+Protein	Outcome	PP.H4@1e-6	>=0.75@1e-6	PP.H4@1e-5	>=0.75@1e-5	PP.H4@1e-4	>=0.75@1e-4
+SCN4B	Lumbar disc herniation	0.973	yes	0.997	yes	1.000	yes
+CLPS	Cervical disc disorder	0.818	yes	0.978	yes	0.998	yes
+BMP6	Lumbar disc herniation	0.627	no	0.944	yes	0.994	yes
+DAG1	Lumbar disc herniation	0.365	no	0.852	yes	0.983	yes
+DSG2	Lumbar disc herniation	0.340	no	0.837	yes	0.981	yes
+IGFBP3	Surgically treated disc herniation	0.015	no	0.135	no	0.610	no
+IGFBP3	Lumbar disc herniation	0.003	no	0.025	no	0.204	no
+MST1	Lumbar disc herniation	0.002	no	0.023	no	0.190	no

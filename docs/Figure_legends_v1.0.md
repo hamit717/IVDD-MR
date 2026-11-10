@@ -45,3 +45,4 @@ Odds ratios (log scale) for cervical disc disorder (red), lumbar disc herniation
 | **Table S1** | Data sources: protein, UniProt ID, GWAS Catalog accession for the regional exposure statistics, FinnGen endpoint, case/control counts, and file checksums. |
 | **Table S2** | Open Targets annotation of the ten Bonferroni-significant proteins: small-molecule and antibody tractability buckets, clinical-stage candidates, recorded safety liabilities, and associated diseases with association scores. |
 | **Table S3** | Cross-endpoint effect estimates (OR, 95% CI, P) for all Bonferroni-significant proteins across the three FinnGen endpoints. |
+| **Table S4** | Threshold sensitivity: PP.H4 for every protein–outcome pair at p12 = 1 × 10⁻⁶, 1 × 10⁻⁵ and 1 × 10⁻⁴, with pass/fail at a PP.H4 ≥ 0.75 decision threshold. |
