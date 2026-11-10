@@ -19,7 +19,7 @@ Jinwen Zhu^1^, Jianbin Guan^1^, Sibo Wang^1^, Haimiti Abudouaini^1^,\*
 
 ^1^ Department of Spine Surgery, Honghui Hospital, Xi'an Jiaotong University, No. 555 East Youyi Road, Beilin District, Xi'an, Shaanxi Province 710054, China
 
-\* **Correspondence:** Haimiti Abudouaini, MD, Department of Spine Surgery, Honghui Hospital, Xi'an Jiaotong University, No. 555 East Youyi Road, Beilin District, Xi'an, Shaanxi Province 710054, China. E-mail: hmtspine@163.com. Tel: [TODO: telephone number]
+\* **Correspondence:** Haimiti Abudouaini, MD, Department of Spine Surgery, Honghui Hospital, Xi'an Jiaotong University, No. 555 East Youyi Road, Beilin District, Xi'an, Shaanxi Province 710054, China. E-mail: hmtspine@163.com. Tel: +86 178 8208 5070
 
 **E-mail addresses of all authors**
 
@@ -30,10 +30,7 @@ Jinwen Zhu^1^, Jianbin Guan^1^, Sibo Wang^1^, Haimiti Abudouaini^1^,\*
 
 **ORCID iDs**
 
-- Jinwen Zhu — [TODO: 0000-0000-0000-0000]
-- Jianbin Guan — [TODO]
-- Sibo Wang — [TODO]
-- Haimiti Abudouaini — [TODO]
+ORCID iDs are provided in the submission system for all authors who hold one; they are not reproduced on the title page.
 
 ## Manuscript metrics
 
@@ -43,7 +40,7 @@ Jinwen Zhu^1^, Jianbin Guan^1^, Sibo Wang^1^, Haimiti Abudouaini^1^,\*
 | Main text (Introduction–Discussion) | ~4,700 words |
 | Tables | 2 main (Table 1, Table 2) + 3 supplementary (S1–S3) |
 | Figures | 4 main (Fig 1–4), 300 dpi |
-| References | [TODO: reference numbering] |
+| References | 14 |
 | Keywords | intervertebral disc degeneration; lumbar disc herniation; cervical disc disorder; Mendelian randomization; colocalization; plasma proteomics; drug target prioritization |
 
 ---

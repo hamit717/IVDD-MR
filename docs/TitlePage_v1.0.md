@@ -25,7 +25,7 @@ Jinwen Zhu^1^, Jianbin Guan^1^, Sibo Wang^1^, Haimiti Abudouaini^1^,\*
 
 ^1^ Department of Spine Surgery, Honghui Hospital, Xi'an Jiaotong University, No. 555 East Youyi Road, Beilin District, Xi'an, Shaanxi Province 710054, China
 
-\* **Correspondence:** Haimiti Abudouaini, MD, Department of Spine Surgery, Honghui Hospital, Xi'an Jiaotong University, No. 555 East Youyi Road, Beilin District, Xi'an, Shaanxi Province 710054, China. E-mail: hmtspine@163.com. Tel: [TODO: telephone number]
+\* **Correspondence:** Haimiti Abudouaini, MD, Department of Spine Surgery, Honghui Hospital, Xi'an Jiaotong University, No. 555 East Youyi Road, Beilin District, Xi'an, Shaanxi Province 710054, China. E-mail: hmtspine@163.com. Tel: +86 178 8208 5070
 
 **E-mail addresses of all authors**
 
@@ -36,15 +36,12 @@ Jinwen Zhu^1^, Jianbin Guan^1^, Sibo Wang^1^, Haimiti Abudouaini^1^,\*
 
 **ORCID iDs**
 
-- Jinwen Zhu — [TODO: 0000-0000-0000-0000]
-- Jianbin Guan — [TODO]
-- Sibo Wang — [TODO]
-- Haimiti Abudouaini — [TODO]
+ORCID iDs are provided in the submission system for all authors who hold one; they are not reproduced on the title page.
 
 > 两处要你确认的：
 > 1. 你给的邮箱原文是 `hmtspine@163com`，缺一个点，我按 `hmtspine@163.com` 处理。这个若写错，校样阶段通讯就断了，务必核对。
 > 2. 门牌地址（No. 555 East Youyi Road, Beilin District）是我按洪会医院标准地址补的，投稿系统里要填英文全址，请对一遍。
-> 3. ORCID：BMC / Springer Nature 系列（含 Arthritis Research & Therapy）要求通讯作者必须填 ORCID，其余作者强烈建议。注册免费，一个一个来，投稿前统一补。若需要标注共同第一作者，告知我加 "These authors contributed equally to this work."
+> 3. ORCID：按海医生的决定不填——ART 投稿系统会提示，但可以跳过，不阻塞提交（只有部分 BMC 子刊强制通讯作者）。若系统卡住，注册一个约 3 分钟。目前标题页已改为一句中性说明。
 
 ---
 
@@ -56,7 +53,7 @@ Jinwen Zhu^1^, Jianbin Guan^1^, Sibo Wang^1^, Haimiti Abudouaini^1^,\*
 | Main text (Introduction–Discussion) | ~4,700 words |
 | Tables | 2 main (Table 1, Table 2) + 3 supplementary (S1–S3) |
 | Figures | 4 main (Fig 1–4), 300 dpi |
-| References | [TODO: reference numbering] |
+| References | 14 |
 | Keywords | intervertebral disc degeneration; lumbar disc herniation; cervical disc disorder; Mendelian randomization; colocalization; plasma proteomics; drug target prioritization |
 
 > 摘要目前是 Background / Methods / Results / Conclusions 四段、加粗前缀。ART 要求结构式摘要并**把小标题单独成行**，投稿系统里把加粗词改成小标题即可，正文不用动。

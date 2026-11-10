@@ -38,7 +38,7 @@ Yours sincerely,
 **Haimiti Abudouaini, MD** (corresponding author)
 Department of Spine Surgery, Honghui Hospital, Xi'an Jiaotong University
 No. 555 East Youyi Road, Beilin District, Xi'an, Shaanxi Province 710054, China
-E-mail: hmtspine@163.com ｜ Tel: [ ]
+E-mail: hmtspine@163.com ｜ Tel: +86 178 8208 5070
 
 On behalf of all authors: Jinwen Zhu, Jianbin Guan, Sibo Wang, Haimiti Abudouaini
 
