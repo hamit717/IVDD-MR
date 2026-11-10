@@ -34,13 +34,13 @@ A frozen release of the code corresponding exactly to the version used for this 
 
 The authors declare that they have no competing interests.
 
-> **[confirm]** 本分析全部使用公开汇总数据，未接受任何企业资助、未持有相关专利、未担任相关企业顾问。如果四位作者中有任何人与脊柱器械/生物制药企业存在咨询、讲课、持股关系，请在此逐条列出——这类声明漏报被发现，后果远大于申报本身。
+> **[confirmed 2026-11-10]** 海医生确认：四人无器械/药企咨询、讲课、持股关系，无基金。本分析全部使用公开汇总数据，未接受任何企业资助、未持有相关专利、未担任相关企业顾问。如果四位作者中有任何人与脊柱器械/生物制药企业存在咨询、讲课、持股关系，请在此逐条列出——这类声明漏报被发现，后果远大于申报本身。
 
 ## Funding
 
 The authors received no specific funding for this work.
 
-> **[confirm]** 与 Acknowledgements 的 "None" 保持一致。
+> **[confirmed 2026-11-10]** 与 Acknowledgements 的 "None" 保持一致；海医生确认四位作者均无基金可挂。
 
 ## Authors' contributions (CRediT)
 
@@ -53,7 +53,7 @@ The authors received no specific funding for this work.
 
 All authors read and approved the final manuscript and agree to be accountable for all aspects of the work.
 
-> **[confirm] 这张表是我按"谁干了什么最合理"倒推的分配，不是事实记录。** 期刊要求 CRediT 与实际贡献一致，被追问时要能说清。如果实际分工不同（比如两位作者共同一作、或某位只做了数据整理），现在改比返修时改省事得多。若需标注共同第一作者，请告知，我在标题页加 "These authors contributed equally"。
+> **[confirmed 2026-11-10] 海医生确认 CRediT 分工与实际一致。** 期刊要求 CRediT 与实际贡献一致，被追问时要能说清。如果实际分工不同（比如两位作者共同一作、或某位只做了数据整理），现在改比返修时改省事得多。若需标注共同第一作者，请告知，我在标题页加 "These authors contributed equally"。
 
 ## Acknowledgements
 
