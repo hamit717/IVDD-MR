@@ -11,8 +11,8 @@
 - [x] 仓库已上线：**https://github.com/hamit717/IVDD-MR**（公开，main = ff40637）
 - [x] URL 已回填至 Methods Software 段与 Declarations Code availability
 - [x] tag `v1.0.0` 已推送（Zenodo 归档用）
-- [ ] 打 release 拿 DOI：GitHub → Releases → New（选 tag `v1.0.0`），授权 Zenodo 后
-      `python3 scripts/set_repo_url.py hamit717 --doi 10.5281/zenodo.xxxxxxx`
+- [x] Release 已发布，Zenodo 已归档：**DOI 10.5281/zenodo.24098303**（concept 10.5281/zenodo.24098302），已回填 Declarations 与 README
+- [ ] **Zenodo 记录作者名需修**：当前显示 "PyGuy2"（GitHub 显示名），改为四位作者 + 单位
 
 ### A2. 参考文献 —— 已完成（2026-11-08）
 - [x] 12 处引用点全部配真实文献，共 **14 条**，编号按出现顺序（Vancouver）

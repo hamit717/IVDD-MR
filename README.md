@@ -1,5 +1,7 @@
 # Site-resolved plasma proteome-wide Mendelian randomization of intervertebral disc disorders
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24098303.svg)](https://doi.org/10.5281/zenodo.24098303)
+
 Analysis code and summary statistics for the manuscript:
 
 > **Plasma proteome-wide Mendelian randomization identifies a BMP-axis pair (BMP6/CHRDL1) and a mechanotransduction cluster (DAG1, DSG2, SCN4B) for lumbar disc herniation, with a site-specific metabolic signal (CLPS) in cervical disc disorder**
@@ -109,7 +111,7 @@ Manuscript in preparation:
 
 > Zhu J, Guan J, Wang S, Abudouaini H. Site-resolved plasma proteome-wide Mendelian randomization identifies a BMP-axis pair and a mechanotransduction cluster for lumbar disc herniation, with a distinct metabolic signal in cervical disc disorder. *Manuscript in preparation* (2026).
 
-If you use this code, please cite the paper (journal and DOI to be added on acceptance) and the primary data sources listed in `docs/DATA_SOURCES.md`.
+If you use this code, please cite the paper (journal and DOI to be added on acceptance) and the archived release: Zhu J, Guan J, Wang S, Abudouaini H. *IVDD-MR* v1.0.0 [software]. Zenodo; 2026. doi:10.5281/zenodo.24098303 (all versions: 10.5281/zenodo.24098302). Primary data sources are listed in `docs/DATA_SOURCES.md`.
 
 ## License
 

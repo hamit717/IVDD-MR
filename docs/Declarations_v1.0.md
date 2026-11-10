@@ -28,7 +28,7 @@ The complete analysis chain — instrument extraction, proteome-wide Wald-ratio 
 
 **https://github.com/hamit717/IVDD-MR**
 
-A frozen release of the code corresponding exactly to the version used for this manuscript is archived at Zenodo: **[TODO: DOI]**. Scripts are written in R 4.4.1 (coloc 5.2.3, data.table 1.18.4, readxl 1.5.0) and Python ≥3.9 (standard library only); the full session record is provided as `env/session_info.txt`.
+A frozen release of the code corresponding exactly to the version used for this manuscript is archived at Zenodo (DOI 10.5281/zenodo.24098303). Scripts are written in R 4.4.1 (coloc 5.2.3, data.table 1.18.4, readxl 1.5.0) and Python ≥3.9 (standard library only); the full session record is provided as `env/session_info.txt`.
 
 ## Competing interests
 
