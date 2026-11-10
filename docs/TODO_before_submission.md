@@ -1,6 +1,6 @@
 # 投稿前待办清单
 
-状态：Discussion 已完稿并配齐 14 条文献，Methods/Results 已回填，声明与图注已起草，稿件已合并为 `Manuscript_v0.2.md`（约 6,400 词，含声明/文献/图注）。
+状态（2026-11-10）：正文占位符已清零（`[TODO]` 0 / `[confirm]` 0 / `[ref]` 0），6,433 词，14 条文献，图件已导出 300 dpi，投稿信已起草。仅剩 Zenodo 记录作者名待修 + 撞车复查。
 以下按"必须做 / 应该做 / 可选"三档排列，全部清完后即可投稿。
 
 ---
@@ -46,10 +46,10 @@
 - [x] Figure legends（4 张）→ `docs/Figure_legends_v1.0.md`
 - [x] 标题页（标题、跑题、作者、单位、邮箱、关键词）→ `docs/TitlePage_v1.0.md`
 - [x] LICENSE（MIT + 图表 CC BY 4.0）
-- [ ] **4 个 ORCID**（通讯作者必填）
-- [ ] 通讯电话（投稿系统必填，不进正文）
-- [ ] 核对通讯邮箱 `hmtspine@163.com`（你原文写成 `163com`）
-- [ ] 核对门牌地址（No. 555 East Youyi Road, Beilin District 是我补的）
+- [x] ORCID：不填（海医生决定；ART 系统可跳过，标题页已改中性说明）
+- [x] 通讯电话：+86 178 8208 5070（已填入标题页与投稿信）
+- [x] 通讯邮箱已按 `hmtspine@163.com` 定稿
+- [x] 门牌地址已定稿（No. 555 East Youyi Road, Beilin District）
 - [x] CRediT 分工已确认与实际一致；不标共同一作（2026-11-10）
 - [x] License：MIT（代码）+ CC BY 4.0（图表），已上线
 

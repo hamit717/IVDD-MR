@@ -2,7 +2,7 @@
 
 > 自动生成文件，请勿直接编辑。改动请改 `docs/` 下的 5 个编辑入口，然后运行
 > `python3 scripts/assemble_manuscript.py` 重新组装（入口清单见脚本头部注释）。
-> 剩余待办见 `docs/TODO_before_submission.md`；`[TODO]` 需在投稿前清零。
+> 投稿前清单见 `docs/TODO_before_submission.md`；正文占位符已清零。
 > 参考文献：正文写方括号 ref:键名 占位，条目在 `docs/references.json`，组装时自动编号（Vancouver）。
 
 ## Title
